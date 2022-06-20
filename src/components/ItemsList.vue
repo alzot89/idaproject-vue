@@ -2,8 +2,8 @@
 
   <ul>
     <li v-for="(item, index) in items" :key="index">
-      <img class="item__image" src="../assets/product_img.png" alt="">
-      <h2 class="item__title">{{ item.title }}</h2>
+      <img class="item__image" :src="item.imageUrl" alt="">
+      <h2 class="item__name">{{ item.name }}</h2>
       <p class="item__description">{{ item.description }}</p>
       <p>{{ item.price }}</p>
     </li>
@@ -13,6 +13,7 @@
 
 <script>
 export default {
+  name: 'ItemsList',
   props: ['items']
 }
 
@@ -33,7 +34,7 @@ ul {
   object-fit: contain;
 }
 
-.item__title {
+.item__name {
   font-family: 'Source Sans Pro';
   font-weight: 600;
   font-size: 20px;
