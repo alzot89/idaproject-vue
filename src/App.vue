@@ -14,9 +14,9 @@ export default {
   data() {
     return {
       items: [
-        { name: 'Торшер с выключателем TL-510B', imageUrl: 'https://hoff.ru/upload/iblock/9ac/9ac76c0139edb6c955b2f08f05f9189c.jpg', description: 'Неплохой такой торшер, черный и светит неплохо', price: '21000' },
-        { name: 'Стул Aspen', imageUrl: 'https://hoff.ru/upload/iblock/249/24966ede35cdcbdef0e3e5fd80314a27.jpg', description: 'Зеленый такой стул из пластика на деревянных ножках', price: '12000' },
-        { name: 'Корзина для мусора MITTE Roca 12 л', imageUrl: 'https://hoff.ru/upload/iblock/0ee/0ee7f8c5aabf8e69939d222244ae8e02.jpg', description: 'Прочная и при этом стильная корзина для мусора Roca выполнена из черной металлической сетки и имеет особую устойчивость благодаря цельнометаллическому дну', price: '8000' }
+        { name: 'Торшер с выключателем TL-510B', imageUrl: 'https://hoff.ru/upload/iblock/9ac/9ac76c0139edb6c955b2f08f05f9189c.jpg', description: 'Неплохой такой торшер, черный и светит неплохо', price: 21000 },
+        { name: 'Стул Aspen', imageUrl: 'https://hoff.ru/upload/iblock/249/24966ede35cdcbdef0e3e5fd80314a27.jpg', description: 'Зеленый такой стул из пластика на деревянных ножках', price: 12000 },
+        { name: 'Корзина для мусора MITTE Roca 12 л', imageUrl: 'https://hoff.ru/upload/iblock/0ee/0ee7f8c5aabf8e69939d222244ae8e02.jpg', description: 'Прочная и при этом стильная корзина для мусора Roca выполнена из черной металлической сетки и имеет особую устойчивость благодаря цельнометаллическому дну', price: 8000 }
       ]
     }
   },

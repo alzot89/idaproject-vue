@@ -3,7 +3,7 @@
     <img class="item__image" :src="imageUrl" :alt="name">
     <h2 class="item__name">{{ name }}</h2>
     <p class="item__description">{{ description }}</p>
-    <p>{{ price }}</p>
+    <p>{{ `${price.toLocaleString()} руб.` }}</p>
   </li>
 </template>
 
@@ -17,14 +17,14 @@ export default {
     },
     description: {
       type: String,
-      required: true
+      required: false
     },
     imageUrl: {
       type: String,
       required: true
     },
     price: {
-      type: String,
+      type: Number,
       required: true
     }
   }
