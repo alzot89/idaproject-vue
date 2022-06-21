@@ -1,7 +1,8 @@
 <template>
 
   <ul>
-    <Item v-for="(item, index) in items" :key="index" :item="item" />
+    <Item v-for="(item, index) in items" :key="index" :name="item.name" :description="item.description"
+      :imageUrl="item.imageUrl" :price="item.price" />
   </ul>
 
 </template>
