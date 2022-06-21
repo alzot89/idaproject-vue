@@ -1,19 +1,19 @@
 <template>
 
   <ul>
-    <Item v-for="(item, index) in items" :key="index" :name="item.name" :description="item.description"
+    <ListItem v-for="(item, index) in items" :key="index" :name="item.name" :description="item.description"
       :imageUrl="item.imageUrl" :price="item.price" />
   </ul>
 
 </template>
 
 <script>
-import Item from '../components/Item.vue';
+import ListItem from '../components/Item.vue';
 export default {
   name: 'ItemsList',
   props: ['items'],
   components: {
-    Item
+    ListItem
   }
 }
 
