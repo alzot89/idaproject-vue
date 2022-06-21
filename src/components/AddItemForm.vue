@@ -32,6 +32,13 @@ export default {
   methods: {
     onSubmit(item) {
       this.$emit('create-item', item);
+      this.formReset();
+    },
+    formReset() {
+      this.item.name = '',
+        this.item.imageUrl = '',
+        this.item.description = '',
+        this.item.price = ''
     }
   }
 }
