@@ -10,7 +10,7 @@
     <input type="text" v-model.trim="item.imageUrl" placeholder="Введите ссылку">
 
     <label>Цена товара</label>
-    <input type="text" v-model.trim="item.price" placeholder="Введите цену">
+    <input type="number" v-model.trim="item.price" placeholder="Введите цену">
 
     <button>Добавить товар</button>
   </form>
