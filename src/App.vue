@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <AddItemForm @create-item="createItem" />
-    <ItemsList v-bind:items="items" />
+    <ItemsList v-bind:items="items" @delete-item="deleteItem" />
   </div>
 </template>
 
@@ -27,6 +27,9 @@ export default {
   methods: {
     createItem(item) {
       this.items.push({ ...item });
+    },
+    deleteItem(index) {
+      this.items.splice(index, 1);
     }
   }
 }
@@ -42,6 +45,7 @@ export default {
   text-align: left;
   background-color: #FFFEFB;
   display: flex;
+  padding: 83px 0 10px;
 }
 
 h1,

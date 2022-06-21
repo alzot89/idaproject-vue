@@ -2,7 +2,7 @@
 
   <ul>
     <ListItem v-for="(item, index) in items" :key="index" :name="item.name" :description="item.description"
-      :imageUrl="item.imageUrl" :price="item.price" />
+      :imageUrl="item.imageUrl" :price="item.price" @delete-item="deleteItem(index)" />
   </ul>
 
 </template>
@@ -14,6 +14,11 @@ export default {
   props: ['items'],
   components: {
     ListItem
+  },
+  methods: {
+    deleteItem(index) {
+      this.$emit('delete-item', index)
+    }
   }
 }
 
