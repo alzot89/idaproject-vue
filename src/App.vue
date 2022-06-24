@@ -65,7 +65,9 @@ body {
   text-align: left;
   background-color: #FFFEFB;
   display: flex;
-  padding: 83px 0 10px;
+  flex-direction: column;
+  padding: 83px 32px 10px;
+  box-sizing: border-box;
 }
 
 h1,
