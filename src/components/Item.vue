@@ -53,6 +53,8 @@ export default {
 .item__image {
   width: 100%;
   object-fit: contain;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
 }
 
 .item__container {

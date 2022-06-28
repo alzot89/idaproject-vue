@@ -27,7 +27,6 @@ export default {
 <style>
 .items-list {
   max-width: 75%;
-
   list-style: none;
   margin: 0;
   padding: 0;
