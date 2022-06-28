@@ -78,6 +78,15 @@ export default {
       ]
     }
   },
+  mounted() {
+    if (localStorage.getItem('items')) {
+      try {
+        this.items = JSON.parse(localStorage.getItem('items'));
+      } catch (e) {
+        localStorage.removeItem('items');
+      }
+    }
+  },
   components: {
     ItemsList,
     AddItemForm,
@@ -86,9 +95,11 @@ export default {
   methods: {
     createItem(item) {
       this.items.push({ ...item });
+      this.saveItems();
     },
     deleteItem(index) {
       this.items.splice(index, 1);
+      this.saveItems();
     },
     sorting(option) {
       switch (option) {
@@ -106,6 +117,10 @@ export default {
           break
         default: this.items.sort();
       }
+    },
+    saveItems() {
+      const parsed = JSON.stringify(this.items);
+      localStorage.setItem('items', parsed);
     }
   }
 }
