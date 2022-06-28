@@ -1,7 +1,9 @@
 <template>
   <div class="app">
-    <h1 class="app__title">Добавление товара</h1>
-    <ItemSorter @sorting="sorting" />
+    <div class="app__container">
+      <h1 class="app__title">Добавление товара</h1>
+      <ItemSorter @sorting="sorting" />
+    </div>
     <div class="content">
       <AddItemForm @create-item="createItem" />
       <ItemsList v-bind:items="items" @delete-item="deleteItem" />
@@ -19,6 +21,42 @@ export default {
   data() {
     return {
       items: [
+        {
+          name: 'Торшер',
+          imageUrl: 'https://hoff.ru/upload/iblock/9ac/9ac76c0139edb6c955b2f08f05f9189c.jpg',
+          description: 'Неплохой такой торшер, черный и светит неплохо',
+          price: 21000
+        },
+        {
+          name: 'Стул',
+          imageUrl: 'https://hoff.ru/upload/iblock/249/24966ede35cdcbdef0e3e5fd80314a27.jpg',
+          description: 'Зеленый такой стул из пластика на деревянных ножках',
+          price: 12000
+        },
+        {
+          name: 'Корзина',
+          imageUrl: 'https://hoff.ru/upload/iblock/0ee/0ee7f8c5aabf8e69939d222244ae8e02.jpg',
+          description: 'Прочная корзина для мусора из черной металлической сетки',
+          price: 8000
+        },
+        {
+          name: 'Торшер',
+          imageUrl: 'https://hoff.ru/upload/iblock/9ac/9ac76c0139edb6c955b2f08f05f9189c.jpg',
+          description: 'Неплохой такой торшер, черный и светит неплохо',
+          price: 21000
+        },
+        {
+          name: 'Стул',
+          imageUrl: 'https://hoff.ru/upload/iblock/249/24966ede35cdcbdef0e3e5fd80314a27.jpg',
+          description: 'Зеленый такой стул из пластика на деревянных ножках',
+          price: 12000
+        },
+        {
+          name: 'Корзина',
+          imageUrl: 'https://hoff.ru/upload/iblock/0ee/0ee7f8c5aabf8e69939d222244ae8e02.jpg',
+          description: 'Прочная корзина для мусора из черной металлической сетки',
+          price: 8000
+        },
         {
           name: 'Торшер',
           imageUrl: 'https://hoff.ru/upload/iblock/9ac/9ac76c0139edb6c955b2f08f05f9189c.jpg',
@@ -85,11 +123,18 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: left;
+  max-width: 1440px;
+  margin: 0 auto;
   background-color: #FFFEFB;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   padding: 32px;
   box-sizing: border-box;
+}
+
+.app__container {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .app__title {
@@ -103,6 +148,22 @@ body {
 .content {
   display: flex;
   margin-top: 16px;
+  align-items: flex-start;
+  position: relative;
+}
+
+@media screen and (max-width: 710px) {
+  .app {
+    padding: 16px;
+  }
+
+  .app__container {
+    flex-direction: column;
+  }
+
+  .content {
+    flex-direction: column;
+  }
 }
 
 h1,
@@ -113,5 +174,14 @@ h3 {
 
 p {
   margin: 0;
+}
+
+button {
+  cursor: pointer;
+  transition: .4s opacity ease;
+}
+
+button:hover {
+  opacity: .6;
 }
 </style>

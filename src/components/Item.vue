@@ -1,12 +1,14 @@
 <template>
-  <li>
+  <li class="item">
     <button type="button" class="item__bin" @click="onClick">
       <img src="../assets/bin.svg" alt="картинка: корзина" class="item__bin-image">
     </button>
     <img class="item__image" :src="imageUrl" :alt="name">
-    <h2 class="item__name">{{ name }}</h2>
-    <p class="item__description">{{ description }}</p>
-    <p>{{ `${price.toLocaleString()} руб.` }}</p>
+    <div class="item__container">
+      <h2 class="item__name">{{ name }}</h2>
+      <p class="item__description">{{ description }}</p>
+      <p class="item__price">{{ `${price.toLocaleString()} руб.` }}</p>
+    </div>
   </li>
 </template>
 
@@ -41,13 +43,20 @@ export default {
 </script>
 
 <style>
-li {
+.item {
   position: relative;
+  background: #FFFEFB;
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.04), 0px 6px 10px rgba(0, 0, 0, 0.02);
+  border-radius: 4px;
 }
 
 .item__image {
   width: 100%;
   object-fit: contain;
+}
+
+.item__container {
+  padding: 16px 16px 24px;
 }
 
 .item__name {
@@ -58,10 +67,20 @@ li {
 }
 
 .item__description {
+  margin-top: 16px;
   font-family: 'Source Sans Pro';
   font-weight: 600;
   font-size: 16px;
   line-height: 1.25;
+}
+
+.item__price {
+  margin-top: 32px;
+  font-family: 'Source Sans Pro';
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  color: #3F3F3F;
 }
 
 .item__bin {
@@ -74,7 +93,6 @@ li {
   position: absolute;
   top: -4px;
   right: -4px;
-  cursor: pointer;
 }
 
 .item__bin-image {

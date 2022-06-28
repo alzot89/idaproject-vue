@@ -42,7 +42,7 @@ export default {
 <style>
 .sorter {
   margin-left: auto;
-  padding: 10px 0 11px 16px;
+  padding: 10px 16px;
   max-width: 260px;
   height: 36px;
   background-color: #FFFEFB;
@@ -55,5 +55,12 @@ export default {
   font-size: 12px;
   line-height: 15px;
   color: #B4B4B4;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 710px) {
+  .sorter {
+    margin: 16px 0 0;
+  }
 }
 </style>

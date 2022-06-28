@@ -87,15 +87,25 @@ export default {
 
 <style>
 .form {
+  min-width: 332px;
+  position: sticky;
+  top: 24px;
+  margin: 0 16px 0 0;
   padding: 24px;
   display: flex;
   flex-direction: column;
-  width: 332px;
   box-sizing: border-box;
   background: #FFFEFB;
   box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.04), 0px 6px 10px rgba(0, 0, 0, 0.02);
   border-radius: 4px;
-  margin-right: 16px;
+}
+
+@media screen and (max-width: 710px) {
+  .form {
+    width: 100%;
+    position: static;
+    margin: 0;
+  }
 }
 
 .form__input {
@@ -122,6 +132,8 @@ input[type='number'] {
 
 .form__input_description {
   height: 108px;
+  max-height: 200px;
+  max-width: 100%;
 }
 
 .form__input::placeholder {
